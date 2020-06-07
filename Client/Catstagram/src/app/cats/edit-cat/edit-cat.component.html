@@ -1,0 +1,20 @@
+<div class="container-fluid">
+    <div class="row">
+        <div class="col-lg-4"></div>
+        <div class="col-lg-4">
+            <form [formGroup]="catForm">
+                <!-- <img [src]="cat.imageUrl" alt=""> -->
+                <img [src]="cat && cat.imageUrl ? cat.imageUrl :''" class="card-img-top" alt="...">
+
+                <div class="form-group">
+                    <label for="exampleFormControlTextarea1">Example textarea</label>
+                    <textarea class="form-control" id="exampleFormControlTextarea1" rows="3"
+                        formControlName="description"></textarea>
+                </div>
+                <button class="btn btn-primary" (click)="editCat()">Save</button>
+               &nbsp; <a routerLink="/cats" class="btn btn-primary">Back</a>
+            </form>
+        </div>
+        <div class="col-lg-4"></div>
+    </div>
+</div>
