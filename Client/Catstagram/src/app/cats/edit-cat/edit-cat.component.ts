@@ -33,7 +33,6 @@ export class EditCatComponent implements OnInit {
       this.catId = params.id;
       this.catService.getCat(this.catId).subscribe((res) => {
         this.cat = res;
-        debugger;
         this.catForm = this.fb.group({
           id: [this.cat.id],
           imageUrl: [this.cat.imageUrl],

@@ -1,0 +1,16 @@
+<!-- <div class="card blog-title">
+    <div class="card-body">
+        <h5 class="card-title">{{post.title}}</h5>
+        <p class="card-text" (click)="showFullSummary()">{{post.summary}}</p>
+        <a class="btn btn-primary blog-btn">Read</a>
+    </div>
+</div> -->
+{{post.isFav}}
+<div class="card blog-title" [ngClass]="{fav : post.isFav}" style="width: 18rem;">
+    <div class="card-body">
+        <h5 class="card-title">{{post.title}}</h5>
+        <p class="card-text" (click)="showFullSummary()">{{post.summary}}</p>
+        <a class="btn btn-primary blog-btn" (click)="toggleFavorite()">Favorite</a>
+        <a class="btn btn-primary ">Read</a>
+    </div>
+</div>

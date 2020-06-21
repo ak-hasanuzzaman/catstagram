@@ -13,13 +13,15 @@ import { WelcomeComponent } from './welcome/welcome.component';
 import { AuthService } from './services/auth.service';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { ToastrModule } from 'ngx-toastr';
+import { TruncatePipe } from './blogs/truncate.pipe';
 
 @NgModule({
   declarations: [
     AppComponent,
     LoginComponent,
     RegisterComponent,
-    WelcomeComponent],
+    WelcomeComponent,
+    ],
   imports: [
     BrowserModule,
     ReactiveFormsModule,
@@ -30,7 +32,8 @@ import { ToastrModule } from 'ngx-toastr';
     BrowserAnimationsModule],
   providers: [
     AuthService,
-    AuthGuardService
+    AuthGuardService,
+    TruncatePipe
   ],
   bootstrap: [AppComponent],
 })

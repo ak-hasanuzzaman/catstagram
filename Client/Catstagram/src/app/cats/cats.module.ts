@@ -31,4 +31,8 @@ import { TokenInterceptorService } from '../core/services/token-interceptor.serv
   ],
   exports: [CreatepostComponent, ListCatsComponent, EditCatComponent],
 })
-export class CatsModule {}
+export class CatsModule {
+  constructor() {
+    // console.log('CatsModule');
+  }
+}

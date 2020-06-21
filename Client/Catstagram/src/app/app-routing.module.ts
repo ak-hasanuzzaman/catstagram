@@ -13,6 +13,7 @@ const routes: Routes = [
   },
   { path: 'login', component: LoginComponent },
   { path: 'register', component: RegisterComponent },
+  { path: 'blogs', loadChildren: './blogs/blogs.module#BlogsModule' },
   { path: 'cats', loadChildren: './cats/cats.module#CatsModule' },
 ];
 
