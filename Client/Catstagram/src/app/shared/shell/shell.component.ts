@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, TemplateRef, Input } from '@angular/core';
 
 @Component({
   selector: 'app-shell',
@@ -6,7 +6,9 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./shell.component.scss']
 })
 export class ShellComponent implements OnInit {
-
+  @Input() headerTemplate: TemplateRef<any>;
+  @Input() bodyTemplate: TemplateRef<any>;
+  @Input() footerTemplate: TemplateRef<any>;
   constructor() { }
 
   ngOnInit() {

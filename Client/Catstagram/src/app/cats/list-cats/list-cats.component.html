@@ -1,4 +1,4 @@
-<app-shell header>
+<!-- <app-shell header>
     <h1 header>This is the header
     </h1> <br>
     <div body class="container-fluid">
@@ -11,8 +11,7 @@
                         <h5 class="card-title">{{cat.id}}</h5>
                         <p class="card-text">Some quick example text to build on the card title and make up the bulk
                             of the card's content.</p>
-                        <!-- <a routerLink="/{{cat.id}}" class="btn btn-primary">See cat info</a> -->
-                        <button class="btn btn-warning" (click)="editCat(cat.id)"> Edit</button>
+                           <button class="btn btn-warning" (click)="editCat(cat.id)"> Edit</button>
                         &nbsp; <button class="btn btn-danger" (click)="deleteCat(cat.id)">Delete</button>
                         &nbsp; <a routerLink="/" class="btn btn-primary">Back</a>
                     </div>
@@ -24,4 +23,13 @@
     <h2 footer>
         This is the footer
     </h2>
+</app-shell> -->
+
+<app-shell [headerTemplate]="headerTemplate" [bodyTemplate]="bodyTemplate"
+[footerTemplate]="footerTemplate"
+>  
 </app-shell>
+
+<ng-template #headerTemplate>This is the header1</ng-template>
+<ng-template #bodyTemplate>This is the body1</ng-template>
+<ng-template #footerTemplate>This is the footer1</ng-template>

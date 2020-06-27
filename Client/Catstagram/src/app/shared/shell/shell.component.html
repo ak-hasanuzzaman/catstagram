@@ -1,4 +1,4 @@
-<div style="margin-left: 40%;">
+<!-- <div style="margin-left: 40%;">
     <ng-content select="[header]"></ng-content>
 </div>
 <br>
@@ -8,4 +8,24 @@
 <br>
 <div style="margin-left: 40%;">
     <ng-content select="[footer]"></ng-content>
-</div>
+</div> -->
+
+<h1 header>
+    <ng-container  
+        *ngTemplateOutlet="headerTemplate ? headerTemplate : defaultHeader">
+    </ng-container>
+</h1> <br>
+<div body class="container-fluid">
+    <ng-container  
+        *ngTemplateOutlet="bodyTemplate ? bodyTemplate : defaultBody">
+    </ng-container>
+</div><br>
+<h2 footer>
+    <ng-container
+        *ngTemplateOutlet="footerTemplate ? footerTemplate : defaultFooter">
+    </ng-container>
+</h2>
+
+<ng-template #defaultHeader>This is the default header</ng-template>
+<ng-template #defaultBody>This is the default body</ng-template>
+<ng-template #defaultFooter>This is the default footer</ng-template>

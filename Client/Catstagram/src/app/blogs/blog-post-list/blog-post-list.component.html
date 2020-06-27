@@ -3,4 +3,6 @@
 
 <app-blog-post-tile #tile *ngFor="let post of blogPosts[currentPage]" [post]="post" (updatePage)="updatePage(post)">
 </app-blog-post-tile>
+<div #entry>
+</div>
 <app-paginator [numberofPages]="blogPosts.length" (pageNumberClick)="updatePage($event)"></app-paginator>

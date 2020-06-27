@@ -8,9 +8,15 @@ import { SharedModule } from '../shared/shared.module';
 import { BlogsRoutingModule } from './blog-routing.module';
 import { PaginatorComponent } from './paginator/paginator.component';
 import { TruncatePipe } from './truncate.pipe';
+import { BlogMessageComponent } from './blog-message/blog-message.component';
+import { TestComponentComponent } from './blog-message/embeddedview-component/test-component.component';
+import { ComponentfactoryresolverComponent } from './blog-post-list/componentfactoryresolver/componentfactoryresolver.component';
+import { AppDemoDirective } from './app-demo.directive';
 
 @NgModule({
-  declarations: [BlogPostListComponent, BlogPostTileComponent, PaginatorComponent, TruncatePipe],
+  declarations: [BlogPostListComponent, BlogPostTileComponent,
+    PaginatorComponent, TruncatePipe, BlogMessageComponent,
+    TestComponentComponent, ComponentfactoryresolverComponent, AppDemoDirective],
   imports: [
     CommonModule,
     ReactiveFormsModule,
@@ -20,6 +26,7 @@ import { TruncatePipe } from './truncate.pipe';
   ],
   providers: [],
   exports: [BlogPostListComponent, BlogPostTileComponent],
+  entryComponents: [ComponentfactoryresolverComponent],
 })
 export class BlogsModule {
   constructor() {

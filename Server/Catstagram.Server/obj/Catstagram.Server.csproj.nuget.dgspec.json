@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\ALL TESTS\\Angular playground\\catstagram\\Server\\Catstagram.Server\\Catstagram.Server.csproj": {}
+    "C:\\Angular playground\\catstagram\\Server\\Catstagram.Server\\Catstagram.Server.csproj": {}
   },
   "projects": {
-    "C:\\ALL TESTS\\Angular playground\\catstagram\\Server\\Catstagram.Server\\Catstagram.Server.csproj": {
+    "C:\\Angular playground\\catstagram\\Server\\Catstagram.Server\\Catstagram.Server.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\ALL TESTS\\Angular playground\\catstagram\\Server\\Catstagram.Server\\Catstagram.Server.csproj",
+        "projectUniqueName": "C:\\Angular playground\\catstagram\\Server\\Catstagram.Server\\Catstagram.Server.csproj",
         "projectName": "Catstagram.Server",
-        "projectPath": "C:\\ALL TESTS\\Angular playground\\catstagram\\Server\\Catstagram.Server\\Catstagram.Server.csproj",
+        "projectPath": "C:\\Angular playground\\catstagram\\Server\\Catstagram.Server\\Catstagram.Server.csproj",
         "packagesPath": "C:\\Users\\ak.hasanuzzaman\\.nuget\\packages\\",
-        "outputPath": "C:\\ALL TESTS\\Angular playground\\catstagram\\Server\\Catstagram.Server\\obj\\",
+        "outputPath": "C:\\Angular playground\\catstagram\\Server\\Catstagram.Server\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"

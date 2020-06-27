@@ -6,16 +6,22 @@ import {
   QueryList,
   ChangeDetectionStrategy,
   ChangeDetectorRef,
+  ViewChild,
+  ViewContainerRef,
+  ComponentFactoryResolver,
+  AfterContentInit,
 } from '@angular/core';
 import { BlogPost } from '../models/blogpost';
 import { BlogPostTileComponent } from '../blog-post-tile/blog-post-tile.component';
+import { componentFactoryName } from '@angular/compiler';
+import { ComponentfactoryresolverComponent } from './componentfactoryresolver/componentfactoryresolver.component';
 
 @Component({
   selector: 'app-blog-post-list',
   templateUrl: './blog-post-list.component.html',
   styleUrls: ['./blog-post-list.component.scss'],
 })
-export class BlogPostListComponent implements OnInit {
+export class BlogPostListComponent implements OnInit, AfterContentInit {
   blogPosts: BlogPost[][];
   currentPage: any;
   @ViewChildren('tile') blogPostTileComponents: QueryList<
@@ -23,7 +29,18 @@ export class BlogPostListComponent implements OnInit {
   >;
   abc: QueryList<BlogPostTileComponent>;
 
-  constructor() {}
+  @ViewChild('entry', { read: ViewContainerRef, static: true })
+  entry: ViewContainerRef;
+
+  constructor(private resolver: ComponentFactoryResolver) {}
+  ngAfterContentInit(): void {
+    const r = this.resolver.resolveComponentFactory(
+      ComponentfactoryresolverComponent
+    );
+    const component = this.entry.createComponent(r);
+    const component1 = this.entry.createComponent(r);
+    component.instance.name = 'hasan zaman';
+  }
 
   ngOnInit() {
     this.currentPage = 0;

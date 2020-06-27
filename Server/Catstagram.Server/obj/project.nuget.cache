@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "L0m1FDdllWFf7PsXaIeXsu7MRJQ07X2KkO9ZO4oZtowowi7mdT9WBiVHBarqbbaTPbtlLRYL2+TPFSkS/bAXiA==",
+  "dgSpecHash": "Lrwrocc9XmL3s7DaxMczKvfKuHPSKlUqsdcgDILXVUqjxyV1k5j1M0xveY24PE6ayQaBdU3OWfXuETt/swJ5Kg==",
   "success": true,
-  "projectFilePath": "C:\\ALL TESTS\\Angular playground\\catstagram\\Server\\Catstagram.Server\\Catstagram.Server.csproj",
+  "projectFilePath": "C:\\Angular playground\\catstagram\\Server\\Catstagram.Server\\Catstagram.Server.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\ak.hasanuzzaman\\.nuget\\packages\\microsoft.aspnetcore.authentication.jwtbearer\\5.0.0-preview.1.20124.5\\microsoft.aspnetcore.authentication.jwtbearer.5.0.0-preview.1.20124.5.nupkg.sha512",
     "C:\\Users\\ak.hasanuzzaman\\.nuget\\packages\\microsoft.aspnetcore.cryptography.internal\\5.0.0-preview.1.20124.5\\microsoft.aspnetcore.cryptography.internal.5.0.0-preview.1.20124.5.nupkg.sha512",

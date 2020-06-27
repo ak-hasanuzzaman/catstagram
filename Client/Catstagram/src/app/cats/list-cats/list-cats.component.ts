@@ -1,23 +1,25 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Input, TemplateRef } from '@angular/core';
 import { Router } from '@angular/router';
 import { CatService } from 'src/app/cats/services/cat.service';
 import { Cat } from '../models/Cat';
+import { Template } from '@angular/compiler/src/render3/r3_ast';
 
 @Component({
   selector: 'app-list-cats',
   templateUrl: './list-cats.component.html',
-  styleUrls: ['./list-cats.component.scss']
+  styleUrls: ['./list-cats.component.scss'],
 })
 export class ListCatsComponent implements OnInit {
+ 
   cats: Array<Cat>;
-  constructor(private catService: CatService, private router: Router) { }
+  constructor(private catService: CatService, private router: Router) {}
 
   ngOnInit() {
     this.fetchCats();
   }
 
   fetchCats() {
-    this.catService.getCats().subscribe(cats => {
+    this.catService.getCats().subscribe((cats) => {
       this.cats = cats;
     });
   }
@@ -27,9 +29,8 @@ export class ListCatsComponent implements OnInit {
   }
 
   deleteCat(id) {
-    this.catService.deleteCat(id).subscribe(res => {
+    this.catService.deleteCat(id).subscribe((res) => {
       this.fetchCats();
     });
   }
-
 }

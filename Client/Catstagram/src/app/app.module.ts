@@ -6,7 +6,7 @@ import { AppComponent } from './app.component';
 import { LoginComponent } from './login/login.component';
 import { ReactiveFormsModule } from '@angular/forms';
 import { RegisterComponent } from './register/register.component';
-import {  HttpClientModule } from '@angular/common/http';
+import { HttpClientModule } from '@angular/common/http';
 import { AuthGuardService } from './services/auth-guard.service';
 import { RouterModule } from '@angular/router';
 import { WelcomeComponent } from './welcome/welcome.component';
@@ -14,14 +14,14 @@ import { AuthService } from './services/auth.service';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { ToastrModule } from 'ngx-toastr';
 import { TruncatePipe } from './blogs/truncate.pipe';
+import { ComponentfactoryresolverComponent } from './blogs/blog-post-list/componentfactoryresolver/componentfactoryresolver.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     LoginComponent,
     RegisterComponent,
-    WelcomeComponent,
-    ],
+    WelcomeComponent],
   imports: [
     BrowserModule,
     ReactiveFormsModule,
@@ -29,13 +29,9 @@ import { TruncatePipe } from './blogs/truncate.pipe';
     RouterModule,
     HttpClientModule,
     ToastrModule.forRoot(),
-    BrowserAnimationsModule],
-  providers: [
-    AuthService,
-    AuthGuardService,
-    TruncatePipe
+    BrowserAnimationsModule,
   ],
+  providers: [AuthService, AuthGuardService, TruncatePipe],
   bootstrap: [AppComponent],
 })
-export class AppModule {
-}
+export class AppModule {}
